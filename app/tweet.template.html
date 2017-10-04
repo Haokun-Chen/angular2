@@ -1,0 +1,14 @@
+<div *ngFor="#post of posts" class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src={{post.profilePic}} alt="..."/>
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{post.name}} <span class="username">@{{post.username}}</span></h4>
+    <div class="content">
+      <div>{{post.tweet}}</div>
+      <like [totalLikes]="post.totalLikes" [isLiked]="post.iLiked"></like>
+    </div>
+  </div>
+</div>
